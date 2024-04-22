@@ -1,0 +1,443 @@
+/* Fuentes */
+@import url('https://fonts.googleapis.com/css2?family=Kode+Mono:wght@400..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=Kode+Mono:wght@400..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Black+Han+Sans&family=Kode+Mono:wght@400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+body {
+    background-color: #0a192f;
+    margin: 0;
+    padding: 0;
+    color: #fff;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    height: 100vh;
+  }
+
+  #menu {
+    backdrop-filter: blur(15px); /* Aplicar un efecto de desenfoque al fondo */
+    color: #fff;
+    text-align: right;           /* Alineación del texto en el menú */
+    width: 100%;         
+    display: flex;               /* Utilizamos flexbox para posicionar el logo y los elementos de menú */
+    align-items: center;         /* Centramos verticalmente los elementos del menú */
+    top: 0;                      /* Fija el menú en la parte superior */
+    justify-content: space-between;
+    position: fixed;             /* Hace que el menú se mantenga fijo */
+    z-index: 1000;               /* Asegura que el menú esté por encima de otros elementos */
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3);  /* Agregamos una sombra en el borde inferior */
+  }
+
+  #menu img {
+    margin-right: 63.3%; /* Espacio entre el logo y los elementos del menú */
+    margin-left: 40px;
+    height: auto;        /* Altura automática para mantener la proporción */
+  }
+
+  #menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    margin-right: 40px; /* Espacio entre el margen derecho de la pantalla */ 
+  }
+
+  #menu ul li {
+    font-family: "Kode Mono", monospace;
+    display: inline-block;
+    font-size: 14px;
+    margin-right: 5px; /* Espacio entre elementos li */ 
+  }
+
+  .btn-outline-info {
+    font-family: "Kode Mono", monospace;
+    padding: 5px 25px;
+    background-color: transparent; /* Color transparente */
+    border: 2px solid #27A9D1;   /* Color y grosor del borde */
+    border-radius: 10px;           /* Redondeado del borde */
+    color: #27A9D1;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    transition: 0.2s;
+  }
+
+  .btn-outline-info:hover {
+    padding: 7px 27px;    /* Mantenemos el mismo padding que en el estado normal */
+    border-color: #555; /* Cambiamos el color del borde al pasar el mouse */
+  }
+
+
+  /* Estilos para los links del menú */
+  #menu ul li a {
+    text-decoration: none;
+    color: #fff;
+    padding: 8px 15px;
+    display: inline-block;
+    transition: color 0.3s;
+  }
+
+  /* Estilos del bot+on de HV */
+  #menu ul li a:hover {
+    color: #27A9D1;
+    transition: color 0.3s;
+  }
+  
+  /* LISTA */
+
+  .lista-container{
+    display: flex;
+  }
+
+  .list-container{
+    margin-right: 1.5rem;
+    font-size: 0.9rem;
+  }
+
+  .tech{
+    font-size: 1.5rem;
+  }
+
+  ul{
+    list-style-type: none;
+    padding-left: 1px;
+    margin-left: 1px;
+  }
+
+  ul h3{
+    font-family: "Kode Mono", monospace;
+    color: #2FDCFF;
+  }
+
+  ul li{
+    font-family: "Montserrat", sans-serif;
+    color: #C8D7E5;
+  }
+
+  /* SECTIONS */
+
+  
+  .icon-list {
+    position: fixed;
+    left: 0; /* Posición desde el borde izquierdo */
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  
+  .icon-list ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .icon-list li {
+    margin-bottom: 20px;
+    position: relative;
+    display: flex;
+    align-items: center;
+  }
+  
+  .icon-item {
+    display: flex;
+    align-items: center;
+  }
+  
+  .line {
+    height: 2px;
+    background-color: #2FDCFF;
+    margin-right: 20px;
+    animation: lineGrow 0.5s ease-in-out forwards;
+    
+  }
+  
+  
+@keyframes lineGrow {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 12rem; /* Ajustar según el largo de la linea */
+  }
+}
+
+#icon-git{
+  filter: grayscale(100%); /* Imagen en blanco y negro */
+    transition: filter 0.5s ease; /* Transición suave para el filtro */
+}
+#icon-git:hover{
+  filter: grayscale(0%); /* Imagen a color */
+}
+
+#icon-ig{
+  filter: grayscale(100%); /* Imagen en blanco y negro */
+    transition: filter 0.5s ease; /* Transición suave para el filtro */
+}
+#icon-ig:hover{
+  filter: grayscale(0%); /* Imagen a color */
+}
+
+#icon-link{
+  filter: grayscale(100%); /* Imagen en blanco y negro */
+    transition: filter 0.5s ease; /* Transición suave para el filtro */
+}
+#icon-link:hover{
+  filter: grayscale(0%); /* Imagen a color */
+}
+  
+
+  .content-container {
+    width: 100%; /* Ajusta el ancho del contenedor según lo necesites */
+    text-align: left; /* Alineación del texto a la izquierda */
+  }
+
+  .title-container {
+    font-family: "Kode Mono", monospace;
+    color: #2FDCFF;
+    font-size: 1.25rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .name-container {
+    font-family: "Black Han Sans", sans-serif;
+    color: #C5D3FF;
+    font-size: 5rem;
+    margin-bottom: 0.5rem;
+    opacity: 0.9;
+  }
+  
+  .emblema-container {
+    font-family: "Black Han Sans", sans-serif;
+    color: #A0C3E5;
+    font-size: 2rem;
+    margin-top: 0.5rem;
+    opacity: 0.7;
+  }
+  
+  .description-container {
+    font-family: "Montserrat", sans-serif;
+    color: #C8D7E5;
+    font-size: 1rem;
+    margin-top: 0.5rem;
+  }   
+
+  .about-container {
+    font-family: "Black Han Sans", sans-serif;
+    color: #C5D3FF;
+    font-size: 1.9rem;
+    margin-right: 30rem;
+    opacity: 0.9;
+    position: relative; /* Permite posicionar la línea respecto al título */
+    display: inline-block;
+  }
+
+  .about-container::after {
+    content: ''; /* Agrega un contenido vacío */
+    position: absolute; /* Permite posicionar la línea */
+    top: 50%; /* Alinea la línea verticalmente al centro del título */
+    left: 110%; /* Coloca la línea a la derecha del título */
+    width: 25rem; /* Define el ancho de la línea */
+    height: 1px; /* Define el grosor de la línea */
+    background-color: #2FDCFF; /* Color de la línea */
+}
+
+
+  .imagenAbout-container {
+    position: relative;
+    display: inline-block;
+    vertical-align: top;
+    height: 37.5rem; /* Ajusta la altura según sea necesario */
+    margin-left: 1.5rem;
+  }
+
+  .imagen-about {
+    width: 19rem;
+    height: 20rem;
+    filter: grayscale(100%); /* Imagen en blanco y negro */
+    transition: filter 0.5s ease; /* Transición suave para el filtro */
+  }
+  
+  .imagenAbout-container:hover .imagen-about {
+    filter: grayscale(0%); /* Imagen a color */
+  }
+
+  .description-about{
+    font-family: "Montserrat", sans-serif;
+    color: #BCD0E1;
+    font-size: 1rem;
+    margin-top: 0.5rem;
+  }
+  
+  .section3-container  {
+    text-align: center;
+    display: flex;
+    justify-content: space-around;
+    gap: 10px;
+    margin: 5rem;
+  }
+  
+
+
+  .experiencia-titulo {
+    font-family: "Black Han Sans", sans-serif;
+    color: #C5D3FF;
+    opacity: 0.9;
+    font-size: 1.9rem;
+    top: 12rem;
+    margin-left: -54rem;
+    position: absolute;
+    display: inline-block;
+  }
+
+  .experiencia-titulo::after {
+    content: ''; /* Agrega un contenido vacío */
+    position: absolute; /* Permite posicionar la línea */
+    top: 50%; /* Alinea la línea verticalmente al centro del título */
+    left: 110%; /* Coloca la línea a la derecha del título */
+    width: 25rem; /* Define el ancho de la línea */
+    height: 1px; /* Define el grosor de la línea */
+    background-color: #2FDCFF; /* Color de la línea */
+}
+
+  .card {
+    background-color: #112240;
+    opacity: 0.9;
+    border-radius: 8px;
+    padding: 2rem;
+    width: 22rem;
+    box-shadow: 0 20px 30px rgba(10, 9, 9, 0.521); /* Agrega una sombra */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card h3{
+    font-family: "Kode Mono", monospace;
+    color: #2FDCFF;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 1.5rem;
+  }
+
+  .imagenes-experence {
+    border-radius: 100%;
+    height: 6rem;
+    width: 6rem;
+    margin-bottom: 15px
+  }
+
+  .fecha-experence{
+    font-family: "Montserrat", sans-serif;
+    color: #BCD0E1;
+    font-size: 13px;
+    padding: 0px;
+    margin-bottom: 0px;
+
+  }
+
+  .company-experence{
+    font-family: "Poppins", sans-serif;
+    color: #C5D3FF;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 25px;
+  }
+
+  .company-experence::after {
+    content: ''; /* Agrega un contenido vacío */
+    display: block; /* Convierte en un bloque en línea */
+    width: 100%; /* Define el ancho de la línea */
+    border-bottom: 1px solid #2FDCFF; /* Agrega una línea sólida con color */
+    margin-top: 8px; /* Espacio superior entre el párrafo y la línea */
+    margin-bottom: 8px; /* Espacio inferior entre la línea y el título */
+  }
+  
+  .titulo-experence {
+    font-family: "Kode Mono", monospace;
+    color: #2FDCFF;
+    font-size: 1.5rem;
+  }
+
+  .function-experence{
+    font-family: "Montserrat", sans-serif;
+    color: #BCD0E1;
+  }
+
+  .tecnology{
+    font-family: "Montserrat", sans-serif;
+    color: #BCD0E1;
+  }
+  
+  .ul-section3 {
+    list-style-type: none;
+    
+  }
+  
+  .ul-section3 {
+    margin-bottom: 8px;
+    
+  }
+
+  .buttons-container {
+    display: flex;
+    gap: 1rem; /* Ajuste este valor según sea necesario */
+}
+
+  .section1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 106vh;          /* Ocupa toda la altura de la pantalla */
+    position: relative;     /* Establece la posición relativa para la primera sección */
+}
+
+  .section2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 108vh;              /* Ocupa toda la altura de la pantalla */
+    position: absolute;         /* Establece la posición absoluta para la segunda sección */
+    top: 40%;                   /* Reduce la distancia entre section1 y section2 */
+    transform: translateY(50%); /* Centra verticalmente la segunda sección */
+}
+
+.section3 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 106vh;              /* Ocupa toda la altura de la pantalla */
+    position: absolute;         /* Establece la posición absoluta para la segunda sección */
+    top: 130%;                   /* Reduce la distancia entre section1 y section2 */
+    transform: translateY(50%); /* Centra verticalmente la segunda sección */
+    width: 25%;                 /* Ajusta el ancho de la section3 */
+}
+
+.section4 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 106vh;              /* Ocupa toda la altura de la pantalla */
+    position: absolute;         /* Establece la posición absoluta para la segunda sección */
+    top: 200%;                   /* Reduce la distancia entre section1 y section2 */
+    transform: translateY(50%); /* Centra verticalmente la segunda sección */
+}
+
+.section5 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 106vh;              /* Ocupa toda la altura de la pantalla */
+    position: absolute;         /* Establece la posición absoluta para la segunda sección */
+    top: 270%;                   /* Reduce la distancia entre section1 y section2 */
+    transform: translateY(50%); /* Centra verticalmente la segunda sección */
+}
+
