@@ -6,6 +6,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 body {
     background-color: #0a192f;
+    flex-direction: column;
     margin: 0;
     padding: 0;
     color: #fff;
@@ -13,6 +14,7 @@ body {
     align-items: center;
     display: flex;
     height: 100vh;
+    
   }
 
   #menu {
@@ -34,6 +36,11 @@ body {
     margin-left: 40px;
     height: auto;        /* Altura automática para mantener la proporción */
   }
+
+  #imagen {
+    display: block; /* Asegura que el logo esté visible en pantallas grandes */
+}
+
 
   #menu ul {
     list-style: none;
@@ -70,7 +77,6 @@ body {
     border-color: #555; /* Cambiamos el color del borde al pasar el mouse */
   }
 
-
   /* Estilos para los links del menú */
   #menu ul li a {
     text-decoration: none;
@@ -80,7 +86,7 @@ body {
     transition: color 0.3s;
   }
 
-  /* Estilos del bot+on de HV */
+  /* Estilos del botón de HV */
   #menu ul li a:hover {
     color: #27A9D1;
     transition: color 0.3s;
@@ -270,22 +276,42 @@ body {
     filter: grayscale(0%); /* Imagen a color */
   }
 
-  .description-about{
+  .description-about1{
     font-family: "Montserrat", sans-serif;
     color: #BCD0E1;
     font-size: 1rem;
     margin-top: 0.5rem;
   }
+  .description-about2{
+    font-family: "Montserrat", sans-serif;
+    color: #BCD0E1;
+    font-size: 1rem;
+    margin-top: 0.5rem;
+  }
+  .description-about3{
+    font-family: "Montserrat", sans-serif;
+    color: #BCD0E1;
+    font-size: 1rem;
+    margin-top: 0.5rem;
+  }
+  .description-about4{
+    font-family: "Montserrat", sans-serif;
+    color: #BCD0E1;
+    font-size: 1rem;
+    margin-top: 0.5rem;
+  }
+
+  .description-about br {
+    display: inline; /* Muestra los saltos de línea en pantallas grandes */
+}
   
   .section3-container  {
     text-align: center;
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     gap: 10px;
     margin: 5rem;
   }
-  
-
 
   .experiencia-titulo {
     font-family: "Black Han Sans", sans-serif;
@@ -308,7 +334,32 @@ body {
     background-color: #2FDCFF; /* Color de la línea */
 }
 
-  .card {
+
+
+  .card1 {
+    background-color: #112240;
+    opacity: 0.9;
+    border-radius: 8px;
+    padding: 2rem;
+    width: 22rem;
+    box-shadow: 0 20px 30px rgba(10, 9, 9, 0.521); /* Agrega una sombra */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card2 {
+    background-color: #112240;
+    opacity: 0.9;
+    border-radius: 8px;
+    padding: 2rem;
+    width: 22rem;
+    box-shadow: 0 20px 30px rgba(10, 9, 9, 0.521); /* Agrega una sombra */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .card3 {
     background-color: #112240;
     opacity: 0.9;
     border-radius: 8px;
@@ -387,6 +438,33 @@ body {
     
   }
 
+  .contact-container {
+    font-family: "Black Han Sans", sans-serif;
+    color: #C5D3FF;
+    font-size: 1.9rem;
+    margin: 0;
+    opacity: 0.9;
+    position: relative; /* Permite posicionar la línea respecto al título */
+    display: inline-block;
+  }
+
+  .contact-container::after {
+    content: ''; /* Agrega un contenido vacío */
+    position: absolute; /* Permite posicionar la línea */
+    top: 50%; /* Alinea la línea verticalmente al centro del título */
+    left: 110%; /* Coloca la línea a la derecha del título */
+    width: 15rem; /* Define el ancho de la línea */
+    height: 1px; /* Define el grosor de la línea */
+    background-color: #2FDCFF; /* Color de la línea */
+}
+
+.description-about{
+    font-family: "Montserrat", sans-serif;
+    color: #BCD0E1;
+    font-size: 1rem;
+    margin-top: 0.5rem;
+}
+
   .buttons-container {
     display: flex;
     gap: 1rem; /* Ajuste este valor según sea necesario */
@@ -435,9 +513,374 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 106vh;              /* Ocupa toda la altura de la pantalla */
+    height: 100vh;              /* Ocupa toda la altura de la pantalla */
     position: absolute;         /* Establece la posición absoluta para la segunda sección */
     top: 270%;                   /* Reduce la distancia entre section1 y section2 */
+    margin-bottom: 50px;
     transform: translateY(50%); /* Centra verticalmente la segunda sección */
 }
 
+.footer-pg {
+  position: relative;
+  bottom: 0; /* Alinea el footer en la parte inferior */
+  width: 100%; /* Ocupa todo el ancho de la pantalla */
+  background-color: #112240; /* Color de fondo */
+  color: #ffffff; /* Color del texto */
+  text-align: center; /* Centra el texto horizontalmente */
+  padding: 20px; /* Espacio alrededor del texto */
+  padding-bottom: 0;
+  transform: translateY(2722%);
+}
+
+.footer-pg p{
+    text-align: center;
+    font-family: "Kode Mono", monospace;
+    color: #2FDCFF;
+    font-size: 12px;
+    margin-top: 20px;
+}
+
+
+/* RESPONSIVE DESIGN */
+
+@media only screen and (max-width: 480px) {
+
+/* Estilos para pantallas pequeñas */
+body{
+  margin: 20px;
+}
+
+/* Ocultar la imagen del logo en pantallas pequeñas */
+#imagen {
+  display: none;
+}
+
+/* Estilos para el botón de menú */
+.menu-btn {
+  background-color: #27A9D1;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  display: block; /* Mostrar el botón en pantallas pequeñas */
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
+/* Estilos para ocultar la lista del menú por defecto */
+#menu ul {
+  display: none;
+  top: calc(100% + 10px); /* Posiciona la lista debajo del botón de menú */
+  right: 10px;
+  background-color: #0a192f;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+/* Estilos para los elementos de la lista del menú */
+#menu ul li {
+  margin-bottom: 10px; /* Espacio entre elementos de la lista */
+}
+
+/* Mostrar la lista del menú al hacer clic en el botón de menú */
+#menu .menu-btn:focus + ul,
+#menu .menu-btn:hover + ul,
+#menu ul:hover {
+  display: block !important; /* Asegura que la lista se muestre */
+}
+
+  .title-container{
+    font-size: 15px;
+  }
+
+  .name-container{
+    font-size: 30px;
+  }
+
+  .emblema-container{
+    font-size: 16px;
+  }
+
+  .description-container{
+    font-size: 18px;
+  }
+
+  .description-container br {
+    display: none;
+}
+
+  
+
+ /* SECTION 2 */
+
+ .section2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;              /* Ocupa toda la altura de la pantalla */
+  position: absolute;         /* Establece la posición absoluta para la segunda sección */
+  top: 40%;                   /* Reduce la distancia entre section1 y section2 */
+  transform: translateY(50%); /* Centra verticalmente la segunda sección */
+}
+
+  .about-container {
+    font-family: "Black Han Sans", sans-serif;
+    color: #C5D3FF;
+    font-size: 20px;
+    margin: 20px;
+    opacity: 0.9;
+    position: relative; /* Permite posicionar la línea respecto al título */
+    display: inline-block;
+  }
+
+  .about-container::after {
+    content: ''; /* Agrega un contenido vacío */
+    position: absolute; /* Permite posicionar la línea */
+    top: 50%; /* Alinea la línea verticalmente al centro del título */
+    left: 110%; /* Coloca la línea a la derecha del título */
+    width: 15rem; /* Define el ancho de la línea */
+    height: 1px; /* Define el grosor de la línea */
+    background-color: #2FDCFF; /* Color de la línea */
+}
+
+  .description-about1{
+    margin: 20px;
+    font-size: 14px;
+  }
+
+  .description-about2{
+    margin: 20px;
+    font-size: 14px;
+  }
+
+  .description-about1 br,
+  .description-about2 br {
+    display: none;
+  }
+  
+  .description-about3{
+    display: none;
+  }
+
+  .description-about4{
+    display: none;
+  }
+
+  .list-container{
+    margin: 20px;
+    font-size: 12px;
+  }
+
+  .tech{
+    font-size: 20px;
+  }
+
+  ul{
+    list-style-type: none;
+    padding-left: 1px;
+    margin-left: 1px;
+  }
+
+  ul h3{
+    font-family: "Kode Mono", monospace;
+    color: #2FDCFF;
+  }
+
+  ul li{
+    font-family: "Montserrat", sans-serif;
+    color: #C8D7E5;
+  }
+
+  .imagenAbout-container {
+    position:absolute;
+    top: 48rem;
+    left: 30px;
+     /* Ajusta la altura según sea necesario */
+    
+  }
+
+  .imagen-about {
+    width: 19rem;
+    height: 20rem;
+    filter: grayscale(100%); /* Imagen en blanco y negro */
+    transition: filter 0.5s ease; /* Transición suave para el filtro */
+  }
+  
+  .imagenAbout-container:hover .imagen-about {
+    filter: grayscale(0%); /* Imagen a color */
+  }
+
+  /* SECTION 3 */
+  .section3 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 5px;
+    width: 44%;
+    height: 110vh;              /* Ocupa toda la altura de la pantalla */
+    position: absolute;         /* Establece la posición absoluta para la segunda sección */
+    left: 0;                /* Alinea el section en la parte izquierda */
+}
+
+  .experiencia-titulo {
+    font-family: "Black Han Sans", sans-serif;
+    color: #C5D3FF;
+    font-size: 20px;
+    margin: 20px;
+    left: 190px;
+    top: 0;                 /* Alinea el section en la parte superior */
+    opacity: 0.9;
+    position: relative; /* Permite posicionar la línea respecto al título */
+    display: inline-block;
+}
+
+  .experiencia-titulo::after {
+    content: ''; /* Agrega un contenido vacío */
+    position: absolute; /* Permite posicionar la línea */
+    top: 50%; /* Alinea la línea verticalmente al centro del título */
+    left: 110%; /* Coloca la línea a la derecha del título */
+    width: 13rem; /* Define el ancho de la línea */
+    height: 1px; /* Define el grosor de la línea */
+    background-color: #2FDCFF; /* Color de la línea */
+}
+
+.section3-container {
+  display: flex;
+  flex-direction: column; /* Cambia la dirección del contenedor a columna */
+  align-items: center; /* Centra los elementos horizontalmente */
+  justify-content: center;
+  margin: 0;
+  margin-left: 50px;
+  transform: translateY(50%);
+}
+
+.card {
+  width: calc(100% - 40px); /* Ajusta el ancho de la tarjeta al ancho completo del contenedor con un margen */
+  margin-bottom: 20px; /* Agrega espacio entre las tarjetas */
+}
+
+.imagenes-experence{
+  display: none;
+}
+
+  .section4{
+    margin: 20px;
+    top: 310%;
+  }
+  .section5{
+    height: 50vh;
+    margin: 20px;
+    top: 420%;
+  }
+
+  .section5 br{
+    display: none;
+  }
+
+  .contact-container {
+    font-family: "Black Han Sans", sans-serif;
+    color: #C5D3FF;
+    font-size: 20px;
+    opacity: 0.9;
+    position: relative; /* Permite posicionar la línea respecto al título */
+    display: inline-block;
+  }
+
+  .contact-container::after {
+    content: ''; /* Agrega un contenido vacío */
+    position: absolute; /* Permite posicionar la línea */
+    top: 50%; /* Alinea la línea verticalmente al centro del título */
+    left: 110%; /* Coloca la línea a la derecha del título */
+    width: 15rem; /* Define el ancho de la línea */
+    height: 1px; /* Define el grosor de la línea */
+    background-color: #2FDCFF; /* Color de la línea */
+}
+
+  .description-about{
+    font-family: "Montserrat", sans-serif;
+    color: #BCD0E1;
+    font-size: 14px;
+  }
+
+  .icon-list{
+    display: none;
+  }
+
+  .footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 15vh;              /* Ocupa toda la altura de la pantalla */
+    position: absolute;         /* Establece la posición absoluta para la segunda sección */
+    top: 500%;                   /* Reduce la distancia entre section1 y section2 */
+    transform: translateY(50%); /* Centra verticalmente la segunda sección */
+  }
+
+  .icon-list-p {
+    position: fixed;
+    margin-bottom: 100px;
+    left: 50%; /* Posición desde el borde izquierdo */
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: center; /* Centra horizontalmente las imágenes */
+    width: 100%; /* Ocupa todo el ancho de la pantalla */
+    padding: 20px 0; /* Agrega espacio entre las imágenes y el borde inferior */ /* Fondo semitransparente */
+    z-index: 999; /* Asegura que esté por encima de otros elementos */
+  }
+  
+  .icon-list-p ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center; /* Centra horizontalmente las imágenes */
+    gap: 20px; /* Espacio entre las imágenes */
+  }
+  
+  .icon-list-p li {
+    display: flex;
+    align-items: center;
+  }
+
+  .footer-p{
+    text-align: center;
+    font-family: "Kode Mono", monospace;
+    color: #2FDCFF;
+    font-size: 12px;
+    margin-top: 20px;
+  }
+
+  .line{
+    display: none;
+  }
+
+  .footer-pg{
+    display: none;
+  }
+
+}
+
+@media only screen and (min-width: 769px) {
+  /* Ocultar el botón de menú en pantallas grandes */
+  .menu-btn {
+      display: none;
+  }
+
+  .footer{
+    display: none;
+  }
+}
+
+@media only screen and (min-width: 900px){
+  .icon-list {
+    position: fixed;
+    left: -90px; /* Posición desde el borde izquierdo */
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}

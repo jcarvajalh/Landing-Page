@@ -131,5 +131,4 @@ buttons.forEach((button, index) => {
 // Ocultar todas las secciones de información al cargar la página
 ocultarInfo();
 });
-  
-  
+
